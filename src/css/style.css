@@ -24,7 +24,7 @@ body .content {
     justify-content: space-between;
     flex: 1;
     width: 100vw;
-    height: 96vh;
+    min-height: 96vh;
     padding: 2.6rem;
     gap: 1rem;
     background-color: var(--background-color);
@@ -33,6 +33,7 @@ body .content {
 .content .main-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: 8rem 0rem 2rem;
 }
 
@@ -69,7 +70,7 @@ body .content {
 }
 
 .info strong {
-    font-size: .8rem;
+    font-size: .75rem;
     color: var(--p-color-font);
 }
 
@@ -83,8 +84,8 @@ body .content {
 .all-buttons {
     font-size: 1rem;
     font-weight: 400;
-    width: 20.6rem;
     flex: 1;
+    width: 20.6rem;
     padding: 1.5rem;
     border: none;
     border-radius: 1.4rem;
@@ -185,4 +186,41 @@ footer p {
     text-align: start;
     font-weight: 400;
     color: var(--secondary-color-font);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    body .content {
+        flex-direction: column;
+        min-height: 96vh;
+    }
+
+    .content .main-content {
+        flex: 1;
+        margin: 4rem 0rem 1rem;
+    }
+
+    .content .result-content img {
+        display: none;
+    }
+
+    .result-content div {
+        max-width: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body .content {
+        padding: 1.5rem;
+    }
+
+    .content .main-content .button-content .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .all-buttons {
+        width: 100%;
+    }
 }
