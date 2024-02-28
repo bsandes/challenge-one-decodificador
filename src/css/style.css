@@ -4,12 +4,12 @@
     --shadow-background-aside-color: rgba(0, 0, 0, 0.08);
     --primary-color-font: #0a3871;
     --secondary-color-font: rgba(255, 255, 255, 1);
+    --tertiary-color-font: rgba(73, 80, 87, 1);
     --dark-color-button: #0A3871;
     --light-color-button: #ffffff;
     --dark-color-button-hover: #062346;
     --light-color-button-hover: rgba(216, 223, 232, 1);
     --h1-color-font: rgba(52, 58, 64, 1);
-    --p-color-font: rgba(73, 80, 87, 1);
 }
 
 * {
@@ -41,6 +41,7 @@ body .content {
     display: flex;
     height: 100%;
     font-size: 2rem;
+    text-transform: lowercase;
     border: none;
     resize: none;
     outline: 0;
@@ -49,6 +50,7 @@ body .content {
 }
 
 .main-content textarea::placeholder {
+    text-transform: none;
     color: var(--primary-color-font);
 }
 
@@ -71,7 +73,7 @@ body .content {
 
 .info strong {
     font-size: .75rem;
-    color: var(--p-color-font);
+    color: var(--tertiary-color-font);
 }
 
 .button-content .buttons {
@@ -152,6 +154,18 @@ body .content {
     font-weight: 400;
 }
 
+.result-content #output {
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 21rem;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    color: var(--tertiary-color-font);
+    display: none;
+}
+
 .result-content button {
     display: none;
 }
@@ -188,8 +202,8 @@ footer p {
     color: var(--secondary-color-font);
 }
 
-/* Tablet */
-@media (max-width: 768px) {
+/* Small tablets */
+@media (max-width: 992px) {
     body .content {
         flex-direction: column;
         min-height: 96vh;

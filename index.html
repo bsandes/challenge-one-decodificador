@@ -18,15 +18,15 @@
             <img src="/src/images/alura-logo.png" alt="Logo da Alura">
         </header>
         <section class="main-content">
-            <textarea name="" placeholder="Digite seu texto" maxlength="380" autocomplete="off"></textarea>
+            <textarea id="input" placeholder="Digite seu texto" maxlength="380" autocomplete="off"></textarea>
             <div class="button-content">
                 <div class="info">
                     <img src="/src/images/ponto-de-exclamacao.svg" alt="Ponto de exclamação">
                     <strong>Apenas letras minúsculas e sem acento.</strong> 
                 </div>
                 <div class="buttons">
-                    <button class="all-buttons style-button-dark">Criptografar</button>
-                    <button class="all-buttons style-button-light">Descriptografar</button>
+                    <button class="all-buttons style-button-dark" onclick="criptografar()">Criptografar</button>
+                    <button class="all-buttons style-button-light" onclick="descriptografar()">Descriptografar</button>
                 </div>
             </div>
         </section>
@@ -36,7 +36,10 @@
                 <h1>Nenhuma mensagem encontrada</h1>
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <button class="all-buttons style-button-light">Copiar</button>
+            <strong id="output">
+
+            </strong>
+            <button class="all-buttons style-button-light" onclick="copiar()">Copiar</button>
         </section>
     </section>
     <footer>
@@ -54,5 +57,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
